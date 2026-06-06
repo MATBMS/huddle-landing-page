@@ -1,0 +1,82 @@
+/* ──────────────────────────────────────────
+   Typography
+   Loads the page fonts from local files and exposes
+   the six text presets defined in the style guide.
+   Paths are relative to THIS file (styles/base/).
+   ────────────────────────────────────────── */
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Page-wide default = body font (Open Sans, regular) */
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-preset-5);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-white);
+}
+
+/* Text presets — names mirror the Figma style guide */
+.text-preset-1 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-preset-1);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.text-preset-2 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-preset-2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.text-preset-3 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-preset-3);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+.text-preset-4 {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-preset-4);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+.text-preset-5 {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-preset-5);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+.text-preset-6 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-preset-6);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
