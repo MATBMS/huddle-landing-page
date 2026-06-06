@@ -1,0 +1,25 @@
+/* ──────────────────────────────────────────
+   Page-wide base
+   Purple background with the decorative wave
+   pinned to the top. Paths are relative to
+   THIS file (styles/base/).
+   ────────────────────────────────────────── */
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-purple-700);
+  background-image: url("../../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+/* ── Desktop ────────────────────────────────────────── */
+@media (min-width: 1024px) {
+  body {
+    /* Desktop uses the top-left corner wave at its natural size. */
+    background-image: url("../../images/bg-desktop.svg");
+    background-position: top left;
+    background-size: auto;
+  }
+}

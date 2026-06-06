@@ -1,0 +1,55 @@
+/* ──────────────────────────────────────────
+   Social links — row of circular icon buttons.
+   The circle is a bordered <a>; the brand glyph
+   is an inline SVG that inherits currentColor.
+   ────────────────────────────────────────── */
+
+.social-links {
+  display: flex;
+  gap: var(--space-200);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  color: var(--color-white);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.social-links__icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Hover/focus: border and glyph turn pink. */
+.social-links__link:hover,
+.social-links__link:focus-visible {
+  color: var(--color-pink-400);
+  border-color: var(--color-pink-400);
+}
+
+.social-links__link:focus-visible {
+  outline: 2px solid var(--color-pink-400);
+  outline-offset: 3px;
+}
+
+/* ── Tablet ─────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .social-links__link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-links__icon {
+    width: 18px;
+    height: 18px;
+  }
+}

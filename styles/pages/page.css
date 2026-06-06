@@ -1,0 +1,126 @@
+/* ──────────────────────────────────────────
+   Page layout — how the pieces are arranged.
+   Mobile-first: a single centered column.
+   ────────────────────────────────────────── */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px 36px;
+}
+
+.page__header {
+  margin-bottom: var(--space-800);
+}
+
+/* Logo sits at its natural size, left-aligned. */
+.page__logo {
+  width: 120px;
+  height: auto;
+}
+
+/* Hero column: illustration, then text + button, all centered. */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-700);
+  text-align: center;
+}
+
+.intro__illustration {
+  width: 100%;
+  height: auto;
+}
+
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-400);
+}
+
+.intro__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+}
+
+/* Social row sits below the hero, pushed toward the bottom. */
+.page__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: var(--space-800);
+}
+
+/* ── Tablet ─────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .page {
+    padding: 40px 80px;
+  }
+
+  /* Spacing opens up to a uniform 40px rhythm. */
+  .intro {
+    gap: var(--space-500);
+  }
+
+  .intro__content {
+    gap: var(--space-500);
+    max-width: 520px;
+  }
+
+  /* Heading grows to Text Preset 1 (40px); body to Preset 4 (18px). */
+  .intro h1 {
+    font-size: var(--font-size-preset-1);
+  }
+
+  .intro p {
+    font-size: var(--font-size-preset-4);
+  }
+}
+
+/* ── Desktop ────────────────────────────────────────── */
+@media (min-width: 1024px) {
+  .page {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: 64px 84px;
+  }
+
+  .page__logo {
+    width: 200px;
+  }
+
+  /* 104px is a one-off gap from the design, not on the spacing scale. */
+  .page__header {
+    margin-bottom: 104px;
+  }
+
+  /* Hero becomes two columns: illustration | text, vertically centred,
+     left-aligned. Both columns flex so the layout holds from 1024–1440px;
+     the text caps at 520px (set above) and the illustration takes the rest. */
+  .intro {
+    flex-direction: row;
+    gap: var(--space-700);
+    text-align: left;
+  }
+
+  .intro__illustration {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .intro__content {
+    flex: 1 1 0;
+    align-items: flex-start;
+  }
+
+  /* Social row tucks under the hero, aligned to the right edge. */
+  .page__footer {
+    justify-content: flex-end;
+    margin-top: var(--space-300);
+    padding-top: 0;
+  }
+}
