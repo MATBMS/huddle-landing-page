@@ -29,16 +29,27 @@
   height: 14px;
 }
 
-/* Hover/focus: border and glyph turn pink. */
-.social-links__link:hover,
+/* Focus: border and glyph turn pink, plus a visible ring. */
 .social-links__link:focus-visible {
   color: var(--color-pink-400);
   border-color: var(--color-pink-400);
-}
-
-.social-links__link:focus-visible {
   outline: 2px solid var(--color-pink-400);
   outline-offset: 3px;
+}
+
+/* Hover only on devices with a real pointer, so a tap doesn't stick. */
+@media (hover: hover) {
+  .social-links__link:hover {
+    color: var(--color-pink-400);
+    border-color: var(--color-pink-400);
+  }
+}
+
+/* Respect users who prefer reduced motion: no colour transition. */
+@media (prefers-reduced-motion: reduce) {
+  .social-links__link {
+    transition: none;
+  }
 }
 
 /* ── Tablet ─────────────────────────────────────────── */

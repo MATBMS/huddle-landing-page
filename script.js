@@ -30,7 +30,4 @@ function hideNotification() {
   notification.classList.remove("notification--visible");
 }
 
-registerButton.addEventListener("click", (event) => {
-  event.preventDefault(); // href="#" is a placeholder — don't jump the page.
-  showNotification();
-});
+registerButton.addEventListener("click", showNotification);

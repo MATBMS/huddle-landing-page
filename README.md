@@ -30,13 +30,14 @@ This is a solution to the [Huddle landing page with single introductory section 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### Extra feature
 
-As a User,<br>
-I need to be able to [...],<br>
-So that I can [...].
+As a first-time visitor interested in joining Huddle,<br>
+I want to be told immediately when my attempt to register can't go through,<br>
+so that I understand my registration didn't fail silently and know to try later.
 
 ### What I learned
+
+This project consolidated techniques I'd already practised rather than teaching me something new — semantic markup, design tokens, a mobile-first Flexbox layout, and a small vanilla-JS interaction. Nothing here was a first.

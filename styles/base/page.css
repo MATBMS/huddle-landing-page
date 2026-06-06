@@ -6,7 +6,7 @@
    ────────────────────────────────────────── */
 
 body {
-  min-height: 100vh;
+  min-height: 100svh;
   background-color: var(--color-purple-700);
   background-image: url("../../images/bg-mobile.svg");
   background-repeat: no-repeat;

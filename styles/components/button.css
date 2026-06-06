@@ -9,9 +9,11 @@
   justify-content: center;
   width: 200px;
   height: 40px;
+  border: none;
   border-radius: 20px;
   background-color: var(--color-white);
   color: var(--color-purple-700);
+  cursor: pointer;
   /* Poppins Regular 12px — Text Preset 6 */
   font-family: var(--font-family-heading);
   font-size: var(--font-size-preset-6);
@@ -22,16 +24,27 @@
   transition: color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover/focus: fill turns magenta, label flips to white. */
-.button:hover,
+/* Focus: fill turns magenta, label flips to white, plus a visible ring. */
 .button:focus-visible {
   background-color: var(--color-magenta-400);
   color: var(--color-white);
-}
-
-.button:focus-visible {
   outline: 2px solid var(--color-magenta-400);
   outline-offset: 3px;
+}
+
+/* Hover only on devices with a real pointer, so a tap doesn't stick. */
+@media (hover: hover) {
+  .button:hover {
+    background-color: var(--color-magenta-400);
+    color: var(--color-white);
+  }
+}
+
+/* Respect users who prefer reduced motion: no colour/shadow transition. */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
 }
 
 /* ── Tablet ─────────────────────────────────────────── */
